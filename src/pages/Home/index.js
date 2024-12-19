@@ -1,5 +1,13 @@
+import ViewVideo from '~/components/ViewVideo';
+
 function Home() {
-    return <h2 style={{height: '2000px'}}>Home Page</h2>;
+    const CATEGORIES = 'for-you';
+
+    return (
+        <div style={{ height: '2000px' }}>
+            <ViewVideo type={CATEGORIES} />
+        </div>
+    );
 }
 
 export default Home;

@@ -23,6 +23,7 @@ import { UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
+import { UserAuth } from '~/components/Store/AuthContext';
 
 const cx = className.bind(styles);
 
@@ -61,7 +62,9 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
+
+    const { setOpenFormLogin } = UserAuth();
 
     //handle Logic
     const handleMenuChange = (menuItem) => {
@@ -98,6 +101,10 @@ function Header() {
         },
     ];
 
+    const handleFormLogin = () => {
+        setOpenFormLogin(true);
+    };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -119,7 +126,9 @@ function Header() {
                     ) : (
                         <>
                             <Button text>Upload</Button>
-                            <Button primary>Log in</Button>
+                            <Button primary onClick={handleFormLogin}>
+                                Login
+                            </Button>
                         </>
                     )}
 

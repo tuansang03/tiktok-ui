@@ -10,7 +10,7 @@
 
     //Default layout
     --default-layout-header-height: 60px;
-    --default-layout-with: 1150px;
+    --default-layout-with: 2150px;
     --default-layout-horizontal-spacer: 24px;
 }
 
@@ -29,7 +29,7 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
-    overflow-y: overlay;
+    // overflow: hidden;
 }
 
 //Scrollbar CSS

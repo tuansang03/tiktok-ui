@@ -1,0 +1,41 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+    user-select: none;
+}
+
+.form-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.from {
+    width: 483px;
+    height: 642px;
+    position: relative;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tab-control {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    right: 24px;
+    top: 24px;
+    position: absolute;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(22, 24, 35, 0.03);
+}
