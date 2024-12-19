@@ -33,12 +33,12 @@ function Sidebar() {
             })
             .catch((error) => console.error(error));
 
-        // userFollowService
-        //     .getFollowings({ page })
-        //     .then((data) => {
-        //         setFollowingUsers(data);
-        //     })
-        //     .catch((error) => console.error(error));
+        userFollowService
+            .getFollowings({ page })
+            .then((data) => {
+                setFollowingUsers(data);
+            })
+            .catch((error) => console.error(error));
     }, [page]);
 
     const handleSeeAll = () => {
@@ -63,7 +63,7 @@ function Sidebar() {
                 <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
             </Menu>
             <SuggestedAccounts label="Suggested accounts" data={suggestedUser} onSeeMore={handleSeeAll} />
-            {/* <SuggestedAccounts label="Following accounts" data={followingUser} /> */}
+            <SuggestedAccounts label="Following accounts" data={followingUser} />
         </aside>
     );
 }
